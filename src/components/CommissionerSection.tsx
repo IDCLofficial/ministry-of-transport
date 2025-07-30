@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import AnimatedSection from './AnimatedSection2';
 
 interface CommissionerSectionProps {
   imageSrc: string;
@@ -22,8 +23,7 @@ export default function CommissionerSection({
 }: CommissionerSectionProps) {
   return (
     <section className="w-full bg-[#f3f8fa] py-20 px-4 md:px-0 flex justify-center">
-        {/* <div className="flex flex-col md:flex-row items-center gap-18 w-full px-4 px-[3rem]"> */}
-    {/* // <section className="w-full bg-[#f4f8f9] h-screen md:h-[80vh] py-16 flex justify-center"> */}
+ 
      <div className="w-[94%] max-w-6xl mx-auto flex flex-col md:flex-row items-stretch gap-16">
         {/* Image */}
         <div className="flex-shrink-0 flex items-stretch">
@@ -39,6 +39,7 @@ export default function CommissionerSection({
         </div>
 
         {/* Text Content */}
+        <AnimatedSection>
         <div className="flex-1 flex flex-col md:items-start px-2 w-full">
           <h2 className="text-xl sm:text-2xl md:text-4xl font-bold text-gray-900">
             {title}
@@ -56,6 +57,7 @@ export default function CommissionerSection({
             </button>
           </Link>
         </div>
+        </AnimatedSection>
       </div>
     </section>
   );

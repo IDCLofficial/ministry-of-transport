@@ -6,6 +6,7 @@ import CTASection from "../../components/CTASection";
 import Footer from "../../components/Footer";
 import { TopHero } from "@/components/TopHero";
 import MissionVisionCard from "@/components/DigitalNews";
+import TeamPage from "./Team";
 
 export default function AboutUs() {
     return (
@@ -22,16 +23,7 @@ export default function AboutUs() {
                 imgSrc="/images/IMSG-Logo.svg"
                 altText="Our Story - Imo State Ministry of Transport conference event"
             />
-            {/* Commissioner Section */}
-            <CommissionerSection
-                imageSrc="/images/commisioner.png"
-                imageAlt="Hon. Emeka Okoronkwo, Commissioner for Transport, Imo State Government"
-                title="Hon. Emeka Okoronkwo"
-                bio="As Commissioner for Transport, Imo State Government, Hon. Emeka Okoronkwo leads policy direction, transport regulation, and sector enforcement, focusing on improving traffic management and infrastructure coordination."
-                details="He oversees the implementation of the Imo State Transport Management Authority (ISTMA) as a single enforcement body and leads the automation of daily ticketing systems for commercial vehicle operations. His efforts in traffic discipline and road order during festive periods have earned positive reviews, aligning with the Governor's 'Shared Prosperity' agenda."
-                buttonText="Contact Details"
-                buttonHref="/contact-us"
-            />
+           <TeamPage/>
             <MissionVisionCard />
             {/* Objectives Section */}
             <ObjectivesSection />
