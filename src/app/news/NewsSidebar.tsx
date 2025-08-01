@@ -13,35 +13,12 @@ function slugify(text: string) {
 
 const newsList = [
   {
-    title: "ISTMA Officers Complete Advanced Traffic Management Training",
-    date: "19th July 2025",
-    img: "/images/commisioner.png",
+    title: "ISTMA Relaunch: New Transport Management Authority Takes Effect",
+    description: "The Imo State Ministry of Transport has successfully relaunched the Imo State Traffic Management Authority (ISTMA) as a single enforcement body, eliminating redundant task forces and streamlining transport regulation across the state.",    
+    date: "Late June 2025",
+    img: "/images/bus.png",
     category: "Latest Updates",
-  },
-  {
-    title: "New Traffic Control System Installed at Major Intersections",
-    date: "11th July 2025",
-    img: "/images/gov.png",
-    category: "Latest Updates",
-  },
-  {
-    title: "Commercial Vehicle Operators Receive Safety Compliance Certificates",
-    date: "31st May 2025",
-    img: "/images/frsc.png",
-    category: "Latest Updates",
-  },
-  {
-    title: "Ministry Announces New Transport Policy Framework for 2025-2026",
-    date: "29th May 2025",
-    img: "/images/nurtw.png",
-    category: "Policies",
-  },
-  {
-    title: "Transport Commissioner Honored for Outstanding Leadership in Traffic Management",
-    date: "9th May 2025",
-    img: "/images/commisioner.png",
-    category: "Policies",
-  },
+  }
 ];
 
 const categories = [

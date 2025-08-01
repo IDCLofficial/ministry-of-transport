@@ -17,7 +17,7 @@ export default function Home() {
      
       {/* hero section */}
       <HeroSection
-        backgroundImage="/images/bus.png"
+        backgroundVideo="/videos/home.mp4"
         overlayText="Imo State Ministry of Transport"
         heading="Transforming Transportation. "
         subheading="Ensuring Safety & Innovation."

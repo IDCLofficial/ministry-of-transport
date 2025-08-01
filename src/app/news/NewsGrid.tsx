@@ -16,38 +16,10 @@ const newsData = [
     title: "ISTMA Relaunch: New Transport Management Authority Takes Effect",
     description: "The Imo State Ministry of Transport has successfully relaunched the Imo State Traffic Management Authority (ISTMA) as a single enforcement body, eliminating redundant task forces and streamlining transport regulation across the state.",
     date: "Late June 2025",
-    image: "/images/commisioner.png",
+    image: "/images/bus.png",
     category: "Latest Updates",
   },
-  {
-    title: "56 Designated Bus Stops Rolled Out Across Owerri",
-    description: "The Ministry of Transport has implemented 56 designated bus stops within Owerri to decongest traffic zones and streamline intra/inter-state transport operations, improving commuter experience.",
-    date: "Mid June 2025",
-    image: "/images/gov.png",
-    category: "Latest Updates",
-  },
-  
-  {
-    title: "Heavy-Duty Vehicle Restrictions Implemented During Peak Hours",
-    description: "New regulations restricting heavy-duty vehicle movement during peak hours (6 a.m. to 6 p.m.) have been successfully implemented, with waiver provisions for essential service operators.",
-    date: "Late May 2025",
-    image: "/images/gov.png",
-    category: "Latest Updates",
-  },
-  {
-    title: "Partnership with NURTW, VIO, FRSC Strengthened",
-    description: "The Ministry has strengthened strategic partnerships with National Union of Road Transport Workers (NURTW), Vehicle Inspection Office (VIO), and Federal Road Safety Corps (FRSC) to enhance transport regulation.",
-    date: "Mid May 2025",
-    image: "/images/frsc.png",
-    category: "Policies",
-  },
-  {
-    title: "Motor Park Modernization Project Commences",
-    description: "Comprehensive modernization of motor parks across Imo State has commenced, with modern facilities, improved infrastructure, and enhanced security to provide better services for commuters and operators.",
-    date: "Early May 2025",
-    image: "/images/nurtw.png",
-    category: "Policies",
-  }
+
 ];
 
 export default function NewsGrid() {

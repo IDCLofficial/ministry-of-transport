@@ -5,23 +5,12 @@ import Link from "next/link";
 
 // Move newsList here or import from a shared location
 const newsList = [
+  
   {
-    title: "Uzodimma Seeks Protection from Illegal Levies in Courtesy Visit to Transport Commissioner",
-    description: "Governor Hope Uzodimma visited Imo Transport Commissioner Rex Anunobi, urging protection for private park owners against illegal levies and supporting regulatory reforms.",
-    date: "9 July 2025",
-    image: "/images/illegal_levies.png",
-  },
-  {
-    title: "Imo Transport Company Staff Celebrate Salary Increment",
-    description: "Staff of the Imo Transport Company (state-owned under the Ministry) received prompt June salary payments and significant increments under the new management led by GM Uche Obiozor.",
-    date: "1 July 2025",
-    image: "/images/itc_salary_increment.png",
-  },
-  {
-    title: "Control Post Flyover Project Enters Final Phase",
-    description: "The Control Post flyover construction reached its final phase under the supervision of the Ministry of Transport and the State Governor, with progress updates released via official media.",
+    title: "ISTMA Relaunch: New Transport Management Authority Takes Effect",
+    description: "The Imo State Ministry of Transport has successfully relaunched the Imo State Traffic Management Authority (ISTMA) as a single enforcement body, eliminating redundant task forces and streamlining transport regulation across the state.",    
     date: "Late June 2025",
-    image: "/images/control_post_flyover.png",
+    image: "/images/bus.png",
   }
 ];
 
