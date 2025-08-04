@@ -7,19 +7,18 @@ import { useEffect, useState } from "react";
 import SecondTopHero from "@/components/SecondTopHero";
 
 const event = {
-  title: "Imo State Gender-Based Violence (GBV) Awareness and Prevention Summit 2025",
-  img: "/images/unwomen.png",
-  date: "25 November 2025",
+ 
+  title: "Transport Operators Compliance Workshop",
+  img: "/images/nurtw.png",
+  date: "OCTOBER 15, 2025",
   time: "10:00 am - 3:00 pm",
   organizer: "Ministry of Transport, Imo State",
   phone: "Nil",
   address: "Owerri Conference Center, Imo State",
-  description:
-    "The Imo State Gender-Based Violence (GBV) Awareness and Prevention Summit 2025 brings together community leaders, advocates, policymakers, and the public to address the urgent issue of gender-based violence. The summit will feature keynote addresses from government officials and experts, interactive workshops on prevention strategies, survivor support, and legal frameworks, as well as panel discussions on community engagement and advocacy. Attendees will have the opportunity to network, share experiences, and collaborate on actionable solutions to end GBV in Imo State. The event aims to raise awareness, foster partnerships, and empower communities to create a safer, more inclusive society for all.",
-};
-
+  description: "Training session for commercial vehicle operators, park managers, and transport unions on new regulatory requirements and safety standards.",
+}
 const speakers = Array(4).fill({
-  name: "Hon. Commissioner Lady Nkechi Ugwu",
+  name: "Hon. Commissioner Chief Emeka Okoronkwo",
   role: "Lead Speaker",
   img: "/images/commisioner.png",
 });
@@ -78,55 +77,85 @@ export default function EventDetailPage() {
     <SecondTopHero
       headingText="Events & Innovation for Empowering Women, Children, and Communities"
     />
-    <div className="bg-white">
-      {/* Hero Title */}
-      <section className="relative w-full h-[220px] flex items-center justify-center bg-gradient-to-br from-green-900/80 to-black/80">
-        <h1 className="text-white text-3xl md:text-5xl font-bold text-center z-10">{event.title}</h1>
-      </section>
-      {/* Event Image & Countdown */}
-      <section className="relative w-full max-w-6xl mx-auto flex flex-col items-center pt-10 pb-6 px-4">
-        <div className="w-full max-w-4xl relative">
-          <Image src={event.img} alt={event.title} width={1200} height={500} className="rounded-xl object-cover w-full h-[340px]" />
-          <div className="md:absolute md:bottom-6 md:right-10">
-            <Countdown targetDate={event.date} />
-          </div>
-        </div>
-        <p className="text-gray-700 mt-8 mb-8 text-center max-w-3xl mx-auto">{event.description}</p>
-      </section>
-      {/* Event Details */}
-      <section className="w-full max-w-6xl mx-auto px-4 mb-12">
-        <h2 className="text-xl font-bold mb-4">EVENT DETAILS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
-          <div><span className="font-semibold">DATE:</span> <span className="ml-2">{event.date}</span></div>
-          <div><span className="font-semibold">ORGANIZER:</span> <span className="ml-2">{event.organizer}</span></div>
-          <div><span className="font-semibold">ADDRESS:</span> <span className="ml-2">{event.address}</span></div>
-          <div><span className="font-semibold">TIME:</span> <span className="ml-2">{event.time}</span></div>
-          <div><span className="font-semibold">PHONE:</span> <span className="ml-2">{event.phone}</span></div>
-        </div>
-      </section>
-      {/* Speakers */}
-      <section className="w-full max-w-6xl mx-auto px-4 mb-16">
-        <h2 className="text-xl font-bold mb-6">SPEAKERS</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-          {speakers.map((sp, idx) => (
-            <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow p-4">
-              <div className="w-40 h-48 relative mb-3 rounded-lg overflow-hidden">
-                <Image src={sp.img} alt={sp.name} fill className="object-cover" />
-              </div>
-              <span className="text-green-700 font-semibold text-xs mb-1">{sp.role}</span>
-              <span className="font-bold text-lg text-center">{sp.name}</span>
-            </div>
-          ))}
-        </div>
-      </section>
-     <CTASection
-      heading="Join Us in Empowering Women and Promoting Social Justice"
-      subtext="Be part of our mission to create an inclusive, equitable, and supportive Imo State for all women, children, and vulnerable groups."
-      buttonLabel="Contact Us"
-      buttonHref="/contact-us"
-     />
-      <Footer />
+   <div className="bg-white">
+  {/* Hero Title */}
+  <section className="relative w-full h-[220px] flex items-center justify-center bg-gradient-to-br from-green-900/80 to-black/80">
+    <h1 className="text-white text-3xl md:text-5xl font-bold text-center z-10">
+      Transport Operators Compliance Workshop
+    </h1>
+  </section>
+
+  {/* Event Image & Countdown */}
+  <section className="relative w-full max-w-6xl mx-auto flex flex-col items-center pt-10 pb-6 px-4">
+    <div className="w-full max-w-4xl relative">
+      <Image
+        src="/images/nurtw.png"
+        alt="Transport Operators Compliance Workshop"
+        width={1200}
+        height={500}
+        className="rounded-xl object-cover w-full h-[340px]"
+      />
+      <div className="md:absolute md:bottom-6 md:right-10">
+        <Countdown targetDate="OCTOBER 15, 2025" />
+      </div>
     </div>
+    <p className="text-gray-700 mt-8 mb-8 text-center max-w-3xl mx-auto">
+      Training session for commercial vehicle operators, park managers, and transport unions on new regulatory requirements and safety standards.
+    </p>
+  </section>
+
+  {/* Event Details */}
+  <section className="w-full max-w-6xl mx-auto px-4 mb-12">
+    <h2 className="text-xl font-bold mb-4">EVENT DETAILS</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 text-sm">
+      <div>
+        <span className="font-semibold">DATE:</span>
+        <span className="ml-2">OCTOBER 15, 2025</span>
+      </div>
+      <div>
+        <span className="font-semibold">ORGANIZER:</span>
+        <span className="ml-2">Permanent Secretary, Ministry of Transport</span>
+      </div>
+      <div>
+        <span className="font-semibold">ADDRESS:</span>
+        <span className="ml-2">ROCKVIEW HOTEL, OWERRI</span>
+      </div>
+      <div>
+        <span className="font-semibold">TIME:</span>
+        <span className="ml-2">10:00 AM</span>
+      </div>
+      <div>
+        <span className="font-semibold">PHONE:</span>
+        <span className="ml-2">+234 803 123 4567</span>
+      </div>
+    </div>
+  </section>
+
+  {/* Speakers */}
+  <section className="w-full max-w-6xl mx-auto px-4 mb-16">
+    <h2 className="text-xl font-bold mb-6">SPEAKERS</h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+      {speakers.map((sp, idx) => (
+        <div key={idx} className="flex flex-col items-center bg-white rounded-xl shadow p-4">
+          <div className="w-40 h-48 relative mb-3 rounded-lg overflow-hidden">
+            <Image src={sp.img} alt={sp.name} fill className="object-cover" />
+          </div>
+          <span className="text-green-700 font-semibold text-xs mb-1">{sp.role}</span>
+          <span className="font-bold text-lg text-center">{sp.name}</span>
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <CTASection
+    heading="Join Us in Regulating and Improving Transport Safety"
+    subtext="Be part of the effort to create a safer, more organized transport system across Imo State through active stakeholder collaboration."
+    buttonLabel="Contact Us"
+    buttonHref="/contact-us"
+  />
+  <Footer />
+</div>
+
     </>
   );
 } 

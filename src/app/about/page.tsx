@@ -22,8 +22,8 @@ export default function AboutUs() {
                 imgSrc="/images/IMSG-Logo.svg"
                 altText="Our Story - Imo State Ministry of Transport conference event"
             />
-           <TeamPage/>
             <MissionVisionCard />
+           <TeamPage/>
             {/* Objectives Section */}
             <ObjectivesSection />
             {/* Structures Section */}

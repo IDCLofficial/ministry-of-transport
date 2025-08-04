@@ -9,7 +9,7 @@ import Footer from "@/components/Footer";
 
 const mediaItems = [
   {
-    image: "/images/commisioner.png",
+    image: "/images/okigwe.jpeg",
     title: "ISTMA Launch Ceremony - Imo State",
     isVideo: false,
   },
@@ -24,22 +24,22 @@ const mediaItems = [
     isVideo: true,
   },
   {
-    image: "/images/gov.png",
+    image: "/images/download.jpeg",
     title: "Motor Park Modernization Project",
     isVideo: false,
   },
   {
-    image: "/images/commisioner.png",
+    image: "/images/truck.png",
     title: "Traffic Management Innovation Workshop",
     isVideo: true,
   },
   {
-    image: "/images/frsc.png",
+    image: "/images/permsec.jpg",
     title: "Commercial Vehicle Inspection Exercise",
     isVideo: false,
   },
   {
-    image: "/images/nurtw.png",
+    image: "/images/bus.png",
     title: "Transport Infrastructure Development Summit",
     isVideo: false,
   },
@@ -67,7 +67,7 @@ export default function MediaPage() {
     <main className="min-h-screen w-full bg-[#F7F9FA] flex flex-col">
       <MediaHeroSection
         title="Media"
-        subtitle="Explore our gallery of photos, videos, and press releases showcasing our commitment to transforming transportation in Imo State"
+        subtitle="Explore our gallery"
         backgroundImage="/images/gradient.png"
         searchBar={<MediaSearchBar placeholder="Search media..." onSearch={setSearch} />}
       />
