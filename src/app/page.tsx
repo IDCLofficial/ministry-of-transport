@@ -20,7 +20,6 @@ export default function Home() {
         backgroundVideo="/videos/home.mp4"
         overlayText="Imo State Ministry of Transport"
         heading="Transforming Transportation. "
-        subheading="Ensuring Safety & Innovation."
         description="At the Imo State Ministry of Transport, we are committed to transforming transportation in Imo through safety, innovation, and accountability."
       />
       {/* About Mandate Section */}

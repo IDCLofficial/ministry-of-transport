@@ -4,7 +4,6 @@ import { TypingText } from './TypingText';
 interface HeroSectionProps {
   overlayText: string;
   heading: string;
-  subheading: string;
   description: string;
   backgroundVideo: string; // updated from backgroundImage
 }
@@ -12,7 +11,6 @@ interface HeroSectionProps {
 export default function HeroSection({
   overlayText,
   heading,
-  subheading,
   description,
   backgroundVideo,
 }: HeroSectionProps) {
