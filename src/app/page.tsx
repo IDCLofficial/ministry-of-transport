@@ -40,7 +40,7 @@ Established through the restructuring of former transport affairs, social welfar
 
       {/* Commissioner Section */}
       <CommissionerSection
-        imageSrc="/images/commisioner.png"
+        imageSrc="/images/commisioner.jpg"
         imageAlt="Chief Emeka Okoronkwo, Commissioner for Transport, Imo State Government"
         title="About The Commissioner"
         bio="Chief Emeka Okoronkwo is the current Commissioner for Transport in Imo State, appointed in January 2025 by Governor Hope Uzodimma. Known for his disciplined leadership, he previously served as Commissioner for Youth and Sports before being redeployed to the transport sector."
