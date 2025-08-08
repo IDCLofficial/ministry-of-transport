@@ -5,7 +5,7 @@ const teamMembers = [
     name: 'Hon. Chief Emeka Okoronkwo',
     role: 'Commissioner',
     image: '/images/commisioner.jpg',
-    bio: 'Provides visionary leadership and strategic direction for the Ministry of Water Resources in Imo State.'
+    bio: 'Provides visionary leadership and strategic direction for the Ministry of Transport in Imo State.'
   },
   {
     name: 'Moneme Judith Fred',
