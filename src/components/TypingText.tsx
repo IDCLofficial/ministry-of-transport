@@ -3,9 +3,9 @@
 import { useEffect, useState } from 'react';
 
 const sentences = [
-    "Transforming Transportation Across Imo State",
-    "Ensuring Safety, Innovation, and Accountability",
-    "Building Modern Transport Infrastructure and Systems"
+    "Transport Revolution",
+    "Ensuring Safety and Accountability",
+    "Upgrading Infrastructure in Imo"
 ];
 
 export function TypingText() {
