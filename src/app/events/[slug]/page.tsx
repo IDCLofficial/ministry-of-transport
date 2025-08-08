@@ -17,11 +17,11 @@ const event = {
   address: "Owerri Conference Center, Imo State",
   description: "Training session for commercial vehicle operators, park managers, and transport unions on new regulatory requirements and safety standards.",
 }
-const speakers = Array(4).fill({
+const speakers = [{
   name: "Hon. Commissioner Chief Emeka Okoronkwo",
   role: "Lead Speaker",
   img: "/images/commisioner.png",
-});
+}];
 
 function Countdown({ targetDate }: { targetDate: string }) {
   const [timeLeft, setTimeLeft] = useState<{days: number, hours: number, minutes: number, seconds: number}>({days: 0, hours: 0, minutes: 0, seconds: 0});
@@ -75,7 +75,7 @@ export default function EventDetailPage() {
   return (
     <>
     <SecondTopHero
-      headingText="Events & Innovation for Empowering Women, Children, and Communities"
+      headingText="Events & Innovation"
     />
    <div className="bg-white">
   {/* Hero Title */}
