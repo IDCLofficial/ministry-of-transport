@@ -10,9 +10,9 @@ export const SectionHero = ({ aboutText, imgSrc, altText }: SectionHeroProps) =>
     return (
         <section className="w-full py-10 sm:py-20">
             <div className="mx-auto px-4 sm:px-8">
-                <div className="flex flex-col lg:flex-row justify-between items-stretch">
+                <div className="flex flex-col lg:flex-row items-stretch gap-6">
                     {/* Left Section - Text Content */}
-                    <div className="w-full lg:w-1/2 p-4 sm:p-10 rounded-xl flex flex-col justify-center min-h-0">
+                    <div className="w-full lg:w-2/3 p-4 sm:p-10 rounded-xl flex flex-col justify-center bg-white">
                         <h2 className="text-2xl sm:text-3xl md:text-[43px] font-medium text-black mb-4 sm:mb-8">
                             About the Ministry
                         </h2>
@@ -20,13 +20,14 @@ export const SectionHero = ({ aboutText, imgSrc, altText }: SectionHeroProps) =>
                             {aboutText}
                         </p>
                     </div>
+
                     {/* Right Section - Image */}
-                    <div className="relative w-full lg:w-[30%] min-h-[220px] sm:min-h-[350px] lg:min-h-0 h-full flex-1 flex items-stretch justify-center mt-6 lg:mt-0">
-                        <div className="relative w-full h-[350px]">
+                    <div className="relative w-full lg:w-1/3 flex items-stretch">
+                        <div className="relative w-full h-auto">
                             <Image 
                                 src={imgSrc}
                                 alt={altText}                       
-                                className="object-cover rounded-xl"
+                                className="object-cover rounded-xl h-full w-full"
                                 fill
                                 priority
                             />
@@ -36,4 +37,4 @@ export const SectionHero = ({ aboutText, imgSrc, altText }: SectionHeroProps) =>
             </div>
         </section>
     );
-}; 
+};

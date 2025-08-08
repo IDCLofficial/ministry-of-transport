@@ -4,7 +4,7 @@ const teamMembers = [
   {
     name: 'Hon. Chief Emeka Okoronkwo',
     role: 'Commissioner',
-    image: '/images/commisioner.png',
+    image: '/images/commisioner.jpg',
     bio: 'Provides visionary leadership and strategic direction for the Ministry of Water Resources in Imo State.'
   },
   {
@@ -26,7 +26,7 @@ export default function TeamPage() {
             key={idx}
             className="bg-white rounded-2xl shadow p-6 flex flex-col items-center w-[280px] border-2 border-transparent transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:border-green-600"
           >
-            <div className="relative w-40 h-40 rounded-full border-4 border-green-600 overflow-hidden mb-4">
+            <div className="relative w-40 h-50 rounded-full border-4 border-green-600 overflow-hidden mb-4">
               <Image src={member.image} alt={member.name} fill className="object-cover" />
             </div>
             <h2 className="text-xl text-center font-semibold text-gray-900 mb-1">{member.name}</h2>
