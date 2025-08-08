@@ -50,6 +50,11 @@ const info = {
             label: "Block 6, New Owerri Secretariat 460281",
             href: "/"
         },
+        {
+          label: "+2349029100635",
+          href: "tel:+2349029100635"
+      },
+        
      
     ]
 }
