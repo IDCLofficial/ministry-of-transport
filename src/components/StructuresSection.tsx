@@ -1,5 +1,5 @@
 import Image from "next/image";
-import AnimatedSection from "./AnimatedSection2";
+import AnimatedSection from "./AnimatedSection";
 interface StructuresSectionProps {
     imgSrc: string;
 }
