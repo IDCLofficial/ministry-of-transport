@@ -8,7 +8,7 @@ const teamMembers = [
     bio: 'Provides visionary leadership and strategic direction for the Ministry of Transport in Imo State.'
   },
   {
-    name: 'Moneme Judith Fred',
+    name: 'Mrs. Moneme Judith Fred',
     role: 'Permanent Secretary',
     image: '/images/permsec.jpg',
     bio: 'Oversees administrative operations and ensures effective policy implementation.'
