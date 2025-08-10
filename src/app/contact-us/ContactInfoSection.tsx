@@ -3,7 +3,7 @@ import { FaMapMarkerAlt, FaEnvelope, FaPhone, FaFacebookF, FaTwitter, FaInstagra
 
 const contactInfo = {
   address: "Block 6, State Secretariat Complex, Port Harcourt Road, New OwerriBlock 6, State Secretariat Complex, Port Harcourt Road, New Owerri",
-  email: "",
+  email: "info.imominoftransport@gmail.com",
   phone: "+2349029100635",
   socials: [
     { icon: <FaFacebookF />, href: "#" },
