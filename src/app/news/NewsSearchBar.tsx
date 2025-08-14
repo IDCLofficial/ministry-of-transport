@@ -3,18 +3,11 @@
 import { useState, useEffect } from "react";
 import Link from "next/link";
 
-// Move newsList here or import from a shared location
-const newsList = [
-  
-  {
-    title: "ISTMA Relaunch: New Transport Management Authority Takes Effect",
-    description: "The Imo State Ministry of Transport has successfully relaunched the Imo State Traffic Management Authority (ISTMA) as a single enforcement body, eliminating redundant task forces and streamlining transport regulation across the state.",    
-    date: "Late June 2025",
-    image: "/images/bus.png",
-  }
-];
+import { NewsItem } from './newsData';
 
-
+interface NewsSearchBarProps {
+  newsList: NewsItem[];
+}
 
 function slugify(text: string) {
   return text
@@ -23,7 +16,7 @@ function slugify(text: string) {
     .replace(/(^-|-$)+/g, '');
 }
 
-export default function NewsSearchBar() {
+export default function NewsSearchBar({ newsList }: NewsSearchBarProps) {
   const [query, setQuery] = useState("");
   const [results, setResults] = useState(newsList);
   const [showSuggestions, setShowSuggestions] = useState(false);
@@ -58,13 +51,12 @@ export default function NewsSearchBar() {
     setShowSuggestions(false);
   }
 
+  // Reset search when newsList changes
   useEffect(() => {
-    return () => {
-      setQuery("");
-      setResults(newsList);
-      setShowSuggestions(false);
-    };
-  }, []);
+    setQuery("");
+    setResults(newsList);
+    setShowSuggestions(false);
+  }, [newsList]);
 
   return (
     <div className="w-full flex flex-col items-center py-8 bg-white relative">

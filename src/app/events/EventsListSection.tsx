@@ -1,37 +1,21 @@
+'use client'
+
+import { useEffect, useState } from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import { getEventsList } from './events';
 
-const events = [
-  {
-    date: "JULY 29, 2025",
-    location: "GOVERNMENT HOUSE, OWERRI",
-    title: "ISTMA Launch & Stakeholders Forum",
-    description: "Official launch of the Imo State Traffic Management Authority (ISTMA) with comprehensive stakeholder engagement and operational guidelines presentation.",
-    img: "/images/commisioner.png",
-    details: `Led by the Commissioner for Transport alongside ISTMA officials and transport unions, this forum established operational protocols, compliance requirements, and collaborative frameworks for effective traffic management across Imo State.`,
-    dateString: "2025-07-29T09:00:00",
-  },
-  {
-    date: "OCTOBER 15, 2025",
-    location: "ROCKVIEW HOTEL, OWERRI",
-    title: "Transport Operators Compliance Workshop",
-    description: "Training session for commercial vehicle operators, park managers, and transport unions on new regulatory requirements and safety standards.",
-    img: "/images/nurtw.png",
-    details: `The Permanent Secretary led the workshop, discussing new compliance frameworks, digital ticketing systems, and safety protocols. Participants agreed on implementation timelines for enhanced transport regulation and service delivery.`,
-    dateString: "2025-10-15T10:00:00",
-  },
-  {
-    date: "MAY 27, 2025",
-    location: "GOVERNMENT HOUSE, OWERRI",
-    title: "Road Safety Awareness Campaign Launch",
-    description: "Statewide launch of road safety awareness campaign in collaboration with FRSC, focusing on responsible driving and traffic law compliance.",
-    img: "/images/frsc.png",
-    details: `Commissioner and FRSC officials led the campaign themed "Safe Roads, Safe Lives." The ministry distributed safety materials, conducted demonstrations, and established community engagement programs for road safety education.`,
-    dateString: "2025-05-27T14:00:00",
-  },
-];
-
-
+// Interface for Event data
+interface Event {
+  date: string;
+  location: string;
+  title: string;
+  description: string;
+  img: string;
+  details: string;
+  dateString: string;
+  id: string;
+}
 
 function slugify(text: string) {
   return text
@@ -40,11 +24,48 @@ function slugify(text: string) {
     .replace(/(^-|-$)+/g, '');
 }
 
-const now = new Date();
-const upcomingEvents = events.filter(e => new Date(e.dateString) >= now);
-const pastEvents = events.filter(e => new Date(e.dateString) < now);
-
 export default function EventsListSection() {
+  const [events, setEvents] = useState<Event[]>([]);
+  const [loading, setLoading] = useState(true);
+  
+  useEffect(() => {
+    const fetchEvents = async () => {
+      try {
+        const eventsList = await getEventsList();
+        setEvents(eventsList);
+      } catch (error) {
+        console.error('Error fetching events:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    
+    fetchEvents();
+  }, []);
+  
+  const now = new Date();
+  const upcomingEvents = events.filter(e => new Date(e.dateString) >= now);
+  const pastEvents = events.filter(e => new Date(e.dateString) < now);
+  
+  if (loading) {
+    return (
+      <section className="w-full max-w-6xl mx-auto py-16 px-4">
+        <div className="text-center text-gray-500">Loading events...</div>
+      </section>
+    );
+  }
+
+  // ✅ Show single message if no events at all
+  if (events.length === 0) {
+    return (
+      <section className="w-full max-w-6xl mx-auto py-16 px-4">
+        <div className="text-center text-gray-500 italic">
+          No events available.
+        </div>
+      </section>
+    );
+  }
+
   return (
     <section className="w-full max-w-6xl mx-auto py-16 px-4">
       {/* Upcoming Events Section */}
@@ -52,7 +73,7 @@ export default function EventsListSection() {
       {upcomingEvents.length > 0 ? (
         <div className="flex flex-col gap-8 mb-16">
           {upcomingEvents.map((event) => (
-            <div key={event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0">
+            <div key={event.id || event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
               </div>
@@ -76,12 +97,13 @@ export default function EventsListSection() {
       ) : (
         <div className="text-gray-400 italic mb-16">No upcoming events at this time.</div>
       )}
+
       {/* Past Events Section */}
       <h2 className="text-2xl md:text-3xl font-bold mb-8">Past Events</h2>
       {pastEvents.length > 0 ? (
         <div className="flex flex-col gap-8">
           {pastEvents.map((event) => (
-            <div key={event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0 opacity-70">
+            <div key={event.id || event.title + event.dateString} className="flex flex-col md:flex-row gap-6 items-center border-b pb-8 last:border-b-0 opacity-70">
               <div className="w-full md:w-64 h-40 relative rounded overflow-hidden flex-shrink-0">
                 <Image src={event.img} alt={event.title} fill className="object-cover" />
               </div>
@@ -95,7 +117,6 @@ export default function EventsListSection() {
                   <h3 className="text-xl font-bold mb-1">{event.title}</h3>
                   <p className="text-gray-700 text-sm mb-2">{event.description}</p>
                 </div>
-                
               </div>
             </div>
           ))}
@@ -105,4 +126,4 @@ export default function EventsListSection() {
       )}
     </section>
   );
-} 
+}
