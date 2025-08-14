@@ -56,8 +56,9 @@ const info = {
           label: "+2349029100635",
           href: "tel:+2349029100635"
       },
-        
-     
+        {label: "info.imominoftransport@gmail.com",
+         href: "mailto:info.imominoftransport@gmail.com"
+    },
     ]
 }
 
