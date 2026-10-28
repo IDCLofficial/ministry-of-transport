@@ -18,6 +18,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <script
+          src="https://pulse-track.onrender.com/tracker.min.js"
+          data-key="pk_live_ee6d64560ad7c894711b1fa3"
+          defer
+        />
+      </head>
       <body>
         <GlobalLoader/>
         <Navbar/>
